@@ -213,7 +213,7 @@ def kids_game(names):
     a dictionary (with the super-fast lookup they provide) can help;
     good solutions here will definitely require a dictionary.
     """
-    
+
     used_names_dict = {}
     results_list = []
     letter = None
@@ -245,4 +245,4 @@ def kids_game(names):
 # print(kids_game(["bagon", "baltoy", "yamask", "starly", 
 #                 "nosepass", "kalob", "nicky", "booger"]))
 # print(kids_game(["apple", "berry", "cherry"]))
-# print(kids_game(["noon", "naan", "nun"]))
+# print(kids_game(["noon", "naan", "nun"])) 
