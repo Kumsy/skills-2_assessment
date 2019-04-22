@@ -33,9 +33,14 @@
 
 """
 
-
 # 2. Road Class
 # #############################################################################
+'''
+    ******************************************************
+    * Pseudocode:                                        *
+    * 1. Creat a Road Class with hard coded attributes   *
+    ******************************************************
+    '''
 
 # Create your Road class here
 
@@ -49,6 +54,17 @@ class Road(object):
 
 # 3. Update Password
 # #############################################################################
+
+    '''
+    ********************************************************************
+    * Pseudocode:                                                      *
+    * 1. Create update_password method                                 *
+    * 2. Checks if password is the User's password from our User class *
+    * 3. If password matches, let user update password                 *
+    * 4. If password doesn't match, print("Invalid login")             *
+    ********************************************************************
+    '''
+
 class User(object):
     """A user object."""
 
@@ -67,6 +83,19 @@ class User(object):
 
 # 4. Build a Library
 # #############################################################################
+    '''
+    ************************************************************
+    * Pseudocode:                                              *
+    * 1. Create Library Class                                  *
+    * 2. Add empty book list                                   *
+    * 3. Add add_book method which calls the Book(object)      *
+    * 3. Append user info of title and author into book list   *
+    * 4. Create find books by author method which allows user  *
+    *     to search the book titles by passing the author name *
+    *     and prints the book titles written by that author    *
+    ************************************************************
+    '''
+
 class Book(object):
     """A Book object."""
 
@@ -75,15 +104,21 @@ class Book(object):
         self.author = author
 
 # Create your Library class here
+# Example to call Lib Class: Lib = Library()
+# Then use the methods such as Lib.add_book("Game of Thrones", "Martin")
+# Lib.find_books_by_author("Martin")
+# >>> "Game of Thrones"
 
 class Library(object):
-
+    # Book List
     books = []
 
+    # Add_book method which creates an instance of a Book() and stores it in list.
     def add_book(self, title, author):
         book = Book(title, author)
         self.books.append(book)
-
+    # Allows user to search through our book and using the authors name
+    # and returning a print statement that book title by the author.
     def find_books_by_author(self, author):
 
         for book in self.books:

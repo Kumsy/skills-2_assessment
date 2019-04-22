@@ -28,6 +28,14 @@ def count_words(phrase):
         >>> print_dict(count_words("Porcupine see, porcupine do."))
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
+    '''
+    ******************************************************
+    * Pseudocode:                                        *
+    * 1. Create a dict(word_count)                       *
+    * 2. Split the user phrase into list                 *
+    * 3. Count how many times each word appears via .get *
+    ******************************************************
+    '''
 
     word_count = {}
     phrase = phrase.split(" ")
@@ -67,6 +75,15 @@ def print_melon_at_price(price):
         >>> print_melon_at_price(5.50)
         None found
     """
+
+    '''
+    ********************************************************
+    * Pseudocode:                                          *
+    * 1. Create a dict of melons with key and value        *
+    * 2. Create list for customer price                    *
+    * 3. if price is in the dict, print the key sorted key *
+    ********************************************************
+    '''
 
     melon_inventory = { 'Honeydew': 2.50,
                         'Cantaloupe': 2.50,
@@ -132,6 +149,15 @@ def translate_to_pirate_talk(phrase):
         'me swabbie be not a man!'
     """
 
+    '''
+    ******************************************************
+    * Pseudocode:                                        *
+    * 1. Create a dict translated pirate words           *
+    * 2. Create list to put translated phrase in         *
+    * 3. Return appended words and translation           *
+    ******************************************************
+    '''
+
     pirate_dict =  {'sir': 'matey',
                     'hotel': 'fleabag inn',
                     'student': 'swabbie',
@@ -148,7 +174,7 @@ def translate_to_pirate_talk(phrase):
 
     phrase_list = phrase.split()
     translated_phrase = []
-    # translated_phrase = ''
+    
     
     # Loop through user phrase word by word
     for word in phrase_list:
@@ -157,7 +183,6 @@ def translate_to_pirate_talk(phrase):
             word = pirate_dict[word]
 
         translated_phrase.append(word)
-        # translated_phrase = translated_phrase + ' ' + word
 
     return (" ".join(translated_phrase))
 
@@ -213,6 +238,18 @@ def kids_game(names):
     a dictionary (with the super-fast lookup they provide) can help;
     good solutions here will definitely require a dictionary.
     """
+
+    '''
+    *****************************************************************
+    * Pseudocode:                                                   *
+    * 1. Create placeholder dicts, lists, boolean flag              *
+    * 2. while True, loop through entire list of words for each     *
+    *    iteration meeting their conditions                         *
+    * 3. If conditionals are met, append the word and check that    *
+    *    previous words are not in the list before continuing while *
+    *     looping over the entire list for each check.              *
+    *****************************************************************
+    '''
 
     used_names_dict = {}
     results_list = []
