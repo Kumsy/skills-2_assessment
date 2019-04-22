@@ -39,7 +39,7 @@
 
 # Create your Road class here
 
-class Road:
+class Road(object):
 # Instantiate Road objects here
     num_lanes = 2
     speed_limit = 25
@@ -57,6 +57,12 @@ class User(object):
         self.password = password
 
     # write the update_password method here
+    def update_password(self, current_password):
+       
+        if current_password == self.password:
+             self.password = str(input("Please enter your new password: "))
+        else:
+            print("Invalid login")
 
 
 # 4. Build a Library
@@ -69,4 +75,18 @@ class Book(object):
         self.author = author
 
 # Create your Library class here
+
+class Library(object):
+
+    books = []
+
+    def add_book(self, title, author):
+        book = Book(title, author)
+        self.books.append(book)
+
+    def find_books_by_author(self, author):
+
+        for book in self.books:
+            if book.author == author:
+                print(book.title)
 
